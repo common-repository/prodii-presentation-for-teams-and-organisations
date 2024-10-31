@@ -1,0 +1,49 @@
+.prodii-overview-list {
+    background      : white;
+    width           : 100%;
+    border          : 1px solid #E1E1E1;
+    border-collapse : collapse;
+
+    tr {
+        td, th {
+            padding : 10px;
+        }
+
+        th {
+            border-bottom : 1px solid #E1E1E1;
+        }
+
+        background : white;
+
+        &:nth-of-type(odd) {
+            background : #F9F9F9;
+        }
+    }
+    & {
+        .title {
+            width : 100%;
+        }
+
+        .column-id {
+            text-align : center;
+            width      : 0;
+        }
+
+        .column-title, .column-shortcode, .column-flush {
+            text-align  : left;
+            white-space : nowrap;
+        }
+
+        .column-shortcode {
+            input {
+                background    : rgb(100, 100, 100);
+                color         : rgb(240, 240, 240);
+                padding       : 5px;
+                border-radius : 3px;
+                display       : block;
+                font-family   : Consolas, "Courier New", monospace;
+            }
+        }
+    }
+
+}

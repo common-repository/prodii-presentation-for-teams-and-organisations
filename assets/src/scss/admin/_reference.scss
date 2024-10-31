@@ -1,0 +1,148 @@
+.prodii-reference {
+    #toc {
+        > ul {
+            display       : inline-block;
+            padding       : 15px 15px 15px 30px !important;
+            border        : 1px solid #666666;
+            border-radius : 3px;
+        }
+        ul {
+            padding : 0 0 0 15px;
+
+            li {
+                margin : 5px 0;
+                span {
+                    position        : relative;
+                    cursor          : pointer;
+                    display         : block;
+                    text-decoration : underline;
+                    min-width       : 100px;
+
+                    &::before, &::after {
+                        position    : absolute;
+                        top         : 50%;
+                        font-weight : bold;
+                        transform   : translateY(-50%);
+                    }
+
+                    &::before {
+                        content : ' - ';
+                        left    : -10px;
+                    }
+
+                    &::after {
+                        content : '>';
+                        left    : -15px;
+                        display : none;
+                    }
+
+                    &:hover {
+                        &::after {
+                            display : block;
+                        }
+                        &::before {
+                            display : none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    h2, h3, h4, h5, h6 {
+        padding : 1em 0;
+        margin  : 0;
+        cursor  : pointer;
+        &:hover {
+            text-decoration : underline;
+        }
+    }
+
+    > .section {
+        > {
+            h2, h3, h4, h5, h6 {
+                font-weight : bold;
+            }
+        }
+        &:not(:last-child) {
+            border-bottom : 1px solid #666666;
+        }
+    }
+
+    .section {
+        margin  : 0 -10px;
+        padding : 0 10px;
+
+        > .section {
+            margin     : 0 -5px;
+            border-top : 1px solid #666666;
+        }
+    }
+
+    .file-tree {
+        ul {
+            padding     : 0 0 0 10px;
+            font-family : monospace;
+        }
+
+        ul {
+            li {
+                position : relative;
+                margin   : 0;
+                &::before, &::after {
+                    position   : absolute;
+                    content    : '';
+                    background : #666666;
+                }
+                &::after {
+                    left   : -10px;
+                    top    : -10px;
+                    bottom : 10px;
+                    width  : 1px;
+                }
+
+                > span:first-child {
+                    position     : relative;
+                    display      : inline-block;
+                    padding-left : 5px;
+                    &::before {
+                        position   : absolute;
+                        content    : '';
+                        left       : -10px;
+                        height     : 1px;
+                        width      : 13px;
+                        bottom     : 9px;
+                        background : #666666;
+                    }
+                }
+            }
+        }
+
+        .required, .optional {
+            font-style     : italic;
+            font-size      : .8em;
+            vertical-align : middle;
+            display        : inline-block;
+            margin-left    : 5px;
+            &::before {
+                content : '(';
+            }
+            &::after {
+                content : ')';
+            }
+        }
+    }
+
+    .explanation {
+        dt {
+            font-weight : bold;
+        }
+    }
+
+    pre {
+        background    : #333333;
+        color         : #CCCCCC;
+        padding       : 15px;
+        border-radius : 5px;
+    }
+}
